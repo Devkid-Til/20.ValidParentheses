@@ -4,6 +4,6 @@ public interface Stack<E> {
     E peek();
     int getSize();
     boolean isEmpty();
-    void push(E e) throws IllegalAccessException;
+    void push(E e);
 
 }

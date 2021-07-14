@@ -45,20 +45,20 @@ public class Array<E> {
     /**
      * 向所有元素后添加一个新元素
      * @param e
-     * @throws IllegalAccessException
+     * @throws IllegalArgumentException
      */
-    public void addLast(E e) throws IllegalAccessException {
+    public void addLast(E e) {
         add(size, e);
     }
-    public void addFirst(E e) throws IllegalAccessException {
+    public void addFirst(E e) {
         add(0, e);
     }
     /**
      * 向数组中第index位置插入一个新元素
      */
-    public void add(int index, E e) throws IllegalAccessException {
+    public void add(int index, E e) {
         if (index < 0 || index > size) {
-            throw new IllegalAccessException("Add Failed. Require index >= 0 and index <= size");
+            throw new IllegalArgumentException("Add Failed. Require index >= 0 and index <= size");
         }
         if (size == data.length) {
             resize(2* data.length);

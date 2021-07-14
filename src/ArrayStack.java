@@ -23,7 +23,7 @@ public class ArrayStack<E> implements Stack {
         return array.isEmpty();
     }
     @Override
-    public void push(Object e) throws IllegalAccessException {
+    public void push(Object e) {
         array.addLast((E) e);
     }
     @Override
@@ -50,7 +50,7 @@ public class ArrayStack<E> implements Stack {
         return res.toString();
     }
 
-    public static void main(String[] args) throws IllegalAccessException {
+    public static void main(String[] args) {
         ArrayStack<Integer> stack = new ArrayStack<>();
         for (int i = 0; i < 5; i++){
             stack.push(i);
